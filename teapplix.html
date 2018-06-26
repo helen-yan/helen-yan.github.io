@@ -4,13 +4,27 @@
 		<title>Teapplix Inc</title>
 		<meta charset="utf-8"/>
 		<!--<link rel="stylesheet" type="text/css" href="main.css"/>-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react-dom.js"></script>
 	</head>
 
 	<body>
-		<p>paragraph Hello World!</p>
 		<div id="root"></div>
-		<script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
-		<script src="teapplix.jsx" type="text/babel"></script>
+		<script>
+		var App = React.createClass({
+  		displayName: 'App',
+  		render: function() {
+    		// The second parameter is an object of attributes for the element (if any)
+    		return React.createElement('div', { }, 'hello world');
+  		}
+		});
+ 
+		ReactDOM.render(
+  		React.createElement(App),
+  		document.getElementById('app')
+		);
+		</script>
+		<!--<script src="teapplix.js" type="text/babel"></script>-->
 	</body>
 </html>
 
